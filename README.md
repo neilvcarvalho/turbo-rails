@@ -30,8 +30,6 @@ Turbo Drive makes navigation faster by avoiding full-page reloads. But there is 
 
 A typical scenario for page refreshes is submitting a form and getting redirected back. In such scenarios, sensations significantly improve if only the changed contents get updated instead of replacing the `<body>` of the page. Turbo can do this on your behalf with morphing and scroll preservation using the `<meta name="turbo-refresh-method">` and `<meta name="turbo-refresh-scroll">` meta tags.
 
-
-
 This gem provides a `turbo_refreshes_with` helper to create those meta tags.
 
 For instance:
@@ -59,8 +57,6 @@ Turbo reinvents the old HTML technique of frames without any of the drawbacks th
 
 It also makes it dead easy to carve a single page into smaller pieces that can all live on their own cache timeline. While the bulk of the page might easily be cached between users, a small personalized toolbar perhaps cannot. With Turbo::Frames, you can designate the toolbar as a frame, which will be **lazy-loaded automatically** by the publicly-cached root page. This means simpler pages, easier caching schemes with fewer dependent keys, and all without needing to write a lick of custom JavaScript.
 
-
-
 This gem provides a `turbo_frame_tag` helper to create those frames.
 
 For instance:
@@ -83,7 +79,6 @@ For instance:
 When the user clicks on the `Edit this todo` link, as a direct response to this user interaction, the turbo frame will be automatically replaced with the one in the `edit.html.erb` page.
 
 [See documentation](https://turbo.hotwired.dev/handbook/frames).
-
 
 ### A note on custom layouts
 
